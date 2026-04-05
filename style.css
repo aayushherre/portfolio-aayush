@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
+    transition: all 0.25s ease;
 }
 
 body {
@@ -20,20 +21,44 @@ nav a {
     margin: 0 15px;
     color: #cbd5f5;
     text-decoration: none;
+    position: relative;
 }
 
 nav a:hover {
     color: #00f0ff;
 }
 
-/* PROFILE */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #00f0ff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active {
+    color: #00f0ff;
+}
+
+/* HOME */
+.home-content {
+    text-align: center;
+}
+
 .profile {
     width: 120px;
     border-radius: 50%;
     box-shadow: 0 0 25px #00f0ff;
+    margin-bottom: 20px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
     margin: 40px auto;
     width: 90%;
@@ -66,12 +91,11 @@ section {
     border-radius: 15px;
     text-align: center;
     overflow: hidden;
-    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(0,255,255,0.25);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 40px rgba(0,255,255,0.3);
 }
 
 .card img {
@@ -90,6 +114,48 @@ section {
     text-decoration: none;
 }
 
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    background: #111827;
+    color: white;
+    border: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #00f0ff;
+    border-radius: 8px;
+    border: none;
+}
+
+/* TABLE */
+.info-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #00f0ff;
+    padding: 10px;
+    text-align: center;
+}
+
+.info-table th {
+    background: #00f0ff;
+    color: black;
+}
+
 /* LOGIN */
 .login-box {
     background: #0f172a;
@@ -100,8 +166,8 @@ section {
     box-shadow: 0 0 40px rgba(0,255,255,0.25);
 }
 
-.login-box h2 {
-    color: #00f0ff;
+.login-box:hover {
+    box-shadow: 0 0 50px rgba(0,255,255,0.35);
 }
 
 .login-box input {
@@ -122,6 +188,10 @@ section {
     border: none;
 }
 
+button:active {
+    transform: scale(0.92);
+}
+
 /* CALCULATOR */
 .calculator {
     background: #0f172a;
@@ -137,6 +207,9 @@ section {
     background: #111827;
     color: white;
     border-radius: 10px;
+    padding: 10px;
+    text-align: right;
+    box-shadow: inset 0 0 10px rgba(0,255,255,0.2);
 }
 
 .buttons {
@@ -152,6 +225,11 @@ section {
     background: #1f2937;
     color: white;
     border: none;
+}
+
+.buttons button:hover {
+    background: #374151;
+    box-shadow: 0 0 10px #00f0ff;
 }
 
 .buttons .equal {
