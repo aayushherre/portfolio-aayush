@@ -1,13 +1,26 @@
 # Portfolio Website
 
-This is my personal portfolio website created using HTML, CSS, and JavaScript.
+This is a personal portfolio website built using HTML and CSS.
 
 ## Features
-- Navigation menu
-- Project showcase with images
-- Calculator project
-- Login page
+
+* Navigation menu for multiple pages
+* About section with education details
+* Projects section with UI-based projects
+* Calculator and login page (UI design)
 
 ## Technologies Used
-- HTML
-- CSS
+
+* HTML (structure)
+* CSS (styling and layout)
+
+## Limitations
+
+* No JavaScript functionality yet
+* No backend integration
+
+## Future Improvements
+
+* Add JavaScript for interactivity
+* Make forms functional
+* Improve responsiveness
